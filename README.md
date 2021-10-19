@@ -58,7 +58,9 @@ e.g.
 ./Get.TE.Bed.sh /path/to/your_genome.uppercase.fasta contig1 /path/to/your_genome.uppercase.fasta.out 10000 /path/to/output_dir/
 ```
 The output is as follows:  
-`contigXXX.window.te.tab.sum` - the full TE content of each window along the specified contig/scaffold/chromosome  
+Each output file has the format: `window_end_bp TE_sum`  
+
+The full TE content of each window along the specified contig/scaffold/chromosome is given in `contigXXX.window.te.tab.sum`  
 
 And then the TE content split by family/group - e.g.
 ```
