@@ -14,13 +14,13 @@ Prior to running `Get.TE.Bed.sh` you should run repeat masking e.g. as follows:
 #get broad taxon repeats e.g. lepidoptera
 perl /ceph/software/repeatmasker/RepeatMasker-4.1.0/util/queryRepeatDatabase.pl -species Lepidoptera | grep -v "Species:" > Lepidoptera.Repbase.repeatmasker
 
-#combine
+#combine to form main repeat lib
 cat Lepidoptera.Repbase.repeatmasker your_lib-families.fa > Lepidoptera_and_your_lib.repeatmasker
 
 #make sure your genome is all uppercase
 awk 'BEGIN{FS=" "}{if(!/>/){print toupper($0)}else{print $1}}' your_genome.fasta > your_genome.uppercase.fasta
 
-#get repeat landscape to view expansion of gene families:
+#do repeat masking
 /ceph/software/repeatmasker/RepeatMasker-4.1.0/RepeatMasker -e rmblast -pa 48 -s -a -xsmall -gccalc -lib ./Lepidoptera_and_your_lib.repeatmasker ./your_genome.uppercase.fa
 
 ```
