@@ -34,7 +34,7 @@ awk '{print $11}' your_genome.uppercase.fasta.out | tail -n+4 | sort | uniq > TE
 By default `Get.TE.Bed.sh` will return total TE content and that belonging to the specific families:  
 `DNA,LINE,LTR,Helitron,Retroposon,rRNA,Satellite,SINE,tRNA,Unknown`  
 
-If important famlies present in your genome are not currently included you can add them to the script by appending line ** with your specific family/group.  
+If important famlies present in your genome are not currently included you can add them to the script by appending line 72 with your specific family/group.  
 
 Then it's time to run `Get.TE.Bed.sh` which will:   
 -take a `contig/scaffold/chromosome` you are interested in from your `genome` and produce a bed of `windows of a specified size`  
