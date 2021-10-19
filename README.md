@@ -49,11 +49,27 @@ Now it's time to run `Get.TE.Bed.sh` which will:
 -calculate the proportion of each window that comprises each specific TE family from a `RepeatMasker.out file`. 
 -write the output to your specified `output directory`  
 
-The script is executed as follows:
+After making the script executible with `chmod +x Get.TE.Bed.sh` you can run the script as follows:
 ```
 ./Get.TE.Bed.sh genome contig_name RepeatMasker.out window_size output_dir
 ```
 e.g.
 ```
 ./Get.TE.Bed.sh /path/to/your_genome.uppercase.fasta contig1 /path/to/your_genome.uppercase.fasta.out 10000 /path/to/output_dir/
+```
+The output is as follows:  
+`contigXXX.window.te.tab.sum` - the full TE content of each window along the specified contig/scaffold/chromosome  
+
+And then the TE content split by family/group - e.g.
+```
+contigXXX.DNA.window.te.tab.sum
+contigXXX.Helitron.window.te.tab.sum
+contigXXX.LINE.window.te.tab.sum
+contigXXX.LTR.window.te.tab.sum
+contigXXX.Retroposon.window.te.tab.sum
+contigXXX.rRNA.window.te.tab.sum
+contigXXX.Satellite.window.te.tab.sum
+contigXXX.SINE.window.te.tab.sum
+contigXXX.tRNA.window.te.tab.sum
+contigXXX.Unknown.window.te.tab.sum
 ```
