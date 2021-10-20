@@ -75,3 +75,5 @@ contigXXX.SINE.window.te.tab.sum
 contigXXX.tRNA.window.te.tab.sum
 contigXXX.Unknown.window.te.tab.sum
 ```
+
+You can then do a simple plot for the produced output using the R script `analyse.Get.TE.Bed.output.R`
