@@ -13,8 +13,8 @@ OUTPUT_DIR=$5
 
 echo "you ran: TE.bed.sh $1 $2 $3 $4 $5"
 echo "running all TE sum in windows"
-#--------------------------------
 
+#--------------------------------
 #prepare genome to extract contig
 seqtk seq -l0 ${GENOME} > unwrapped.fasta
 #extract contig
