@@ -48,7 +48,7 @@ bedtools merge -h
 ```
 Which should return the `help` script for `bedtools merge`  
 
-Now it's time to run `Get.TE.Bed.sh` which will:   
+Now it's time to run `Get.TE.Bed.sh` which will (variables you specify are in plain text):   
 -take a `contig/scaffold/chromosome` you are interested in from your `genome` and produce a bed of `windows of a specified size`  
 -calculate the proportion of each window that comprises TEs from a `RepeatMasker.out file`  
 -calculate the proportion of each window that comprises each specific TE family from a `RepeatMasker.out file`. 
