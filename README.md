@@ -28,11 +28,14 @@ awk 'BEGIN{FS=" "}{if(!/>/){print toupper($0)}else{print $1}}' your_genome.fasta
 ```
 
 If this runs successfully you will end up with a `.out` file e.g. `your_genome.uppercase.fasta.out` containing locations of all repeat elements in your genome.  
+
 Additionally you will probably want to look in the `.tbl` output which breaks down the content by TE family.  
+
 At this point I recommend assessing which families are present in your genome e.g. with:
 ```
 awk '{print $11}' your_genome.uppercase.fasta.out | tail -n+4 | sort | uniq > TE.fams
 ```
+
 By default `Get.TE.Bed.sh` will return total TE content and that belonging to the specific families:  
 `DNA,LINE,LTR,Helitron,Retroposon,rRNA,Satellite,SINE,tRNA,Unknown`  
 
