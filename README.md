@@ -4,7 +4,7 @@ De-Kayne 2021
 
 This script `Get.TE.Bed.sh` will calculate TE content (from the .out from a RepeatMasker run) in windows along specific contig/scaffold/chromosome.  
 
-The output will give you the total TE content in windows in addition to the output by family  
+The output will give you the total TE content in each window in addition to the output by family in each window.  
 
 Prior to running `Get.TE.Bed.sh` you should run repeat masking e.g. as follows:  
 
