@@ -50,8 +50,8 @@ Which should return the `help` script for `bedtools merge`
 
 Now it's time to run `Get.TE.Bed.sh` which will (variables you specify are in plain text):   
 -take a `contig/scaffold/chromosome` you are interested in from your `genome` and produce a bed of `windows of a specified size`  
--calculate the proportion of each window that comprises TEs from a `RepeatMasker.out file`  
--calculate the proportion of each window that comprises each specific TE family from a `RepeatMasker.out file`. 
+-calculate the bases in each window that are TEs - from a `RepeatMasker.out file`  
+-for a set of TE families calculate the baes in each window that belong to that family - from a `RepeatMasker.out file`. 
 -write the output to your specified `output directory`  
 
 After making the script executible with `chmod +x Get.TE.Bed.sh` you can run the script as follows:
@@ -62,8 +62,9 @@ e.g.
 ```
 ./Get.TE.Bed.sh /path/to/your_genome.uppercase.fasta contig1 /path/to/your_genome.uppercase.fasta.out 10000 /path/to/output_dir/
 ```
+Each output file will have the format: `window_end_bp TE_sum` - where no TEs/TEs of that family are found the second column will be blank.  
+
 The output is as follows:  
-Each output file has the format: `window_end_bp TE_sum`  
 
 The full TE content of each window along the specified contig/scaffold/chromosome is given in `contigXXX.window.te.tab.sum`  
 
@@ -81,4 +82,4 @@ contigXXX.tRNA.window.te.tab.sum
 contigXXX.Unknown.window.te.tab.sum
 ```
 
-You can then do a simple plot for the produced output using the R script `analyse.Get.TE.Bed.output.R`
+You can then do a simple plot for the output using the R script `analyse.Get.TE.Bed.output.R`
