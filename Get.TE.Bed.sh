@@ -2,6 +2,7 @@
 
 #De-Kayne 2021
 #usage: Get.TE.Bed.sh genome.fasta contig_name repeatmasker_output.out win_length output_dir
+#before running make sure you can run seqtk and bedtools
 
 #--------------------------------
 #specify args
